@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.reading.mapper.BookClassificationPoMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.reading.model.po.BookClassificationPo">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="classification_id" property="classificationId" jdbcType="VARCHAR"/>
+        <result column="classification_name" property="classificationName" jdbcType="VARCHAR"/>
+        <result column="add_person_name" property="addPersonName" jdbcType="VARCHAR"/>
+        <result column="add_person_school" property="addPersonSchool" jdbcType="VARCHAR"/>
+        <result column="classification" property="classification" jdbcType="VARCHAR"/>
+        <result column="classification_rank" property="classificationRank" jdbcType="BIGINT"/>
+        <result column="parent_classification_id" property="parentClassificationId" jdbcType="VARCHAR"/>
+        <result column="is_display" property="isDisplay" jdbcType="BIGINT"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP"/>
+        <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+        id, classification_id, classification_name, add_person_name, add_person_school, classification,
+        classification_rank, parent_classification_id, is_display, gmt_create, gmt_modified
+    </sql>
+    <select id="selectByExample" resultMap="BaseResultMap"
+            parameterType="com.example.demo.reading.model.po.BookClassificationPoExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from book_classification
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from book_classification
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from book_classification
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <delete id="deleteByExample" parameterType="com.example.demo.reading.model.po.BookClassificationPoExample">
+        delete from book_classification
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.example.demo.reading.model.po.BookClassificationPo">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into book_classification (classification_id, classification_name,
+        add_person_name, add_person_school, classification,
+        classification_rank, parent_classification_id,
+        is_display, gmt_create, gmt_modified
+        )
+        values (#{classificationId,jdbcType=VARCHAR}, #{classificationName,jdbcType=VARCHAR},
+        #{addPersonName,jdbcType=VARCHAR}, #{addPersonSchool,jdbcType=VARCHAR}, #{classification,jdbcType=VARCHAR},
+        #{classificationRank,jdbcType=BIGINT}, #{parentClassificationId,jdbcType=VARCHAR},
+        #{isDisplay,jdbcType=BIGINT}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
+        )
+    </insert>
+    <insert id="insertSelective" parameterType="com.example.demo.reading.model.po.BookClassificationPo">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into book_classification
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="classificationId != null">
+                classification_id,
+            </if>
+            <if test="classificationName != null">
+                classification_name,
+            </if>
+            <if test="addPersonName != null">
+                add_person_name,
+            </if>
+            <if test="addPersonSchool != null">
+                add_person_school,
+            </if>
+            <if test="classification != null">
+                classification,
+            </if>
+            <if test="classificationRank != null">
+                classification_rank,
+            </if>
+            <if test="parentClassificationId != null">
+                parent_classification_id,
+            </if>
+            <if test="isDisplay != null">
+                is_display,
+            </if>
+            <if test="gmtCreate != null">
+                gmt_create,
+            </if>
+            <if test="gmtModified != null">
+                gmt_modified,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="classificationId != null">
+                #{classificationId,jdbcType=VARCHAR},
+            </if>
+            <if test="classificationName != null">
+                #{classificationName,jdbcType=VARCHAR},
+            </if>
+            <if test="addPersonName != null">
+                #{addPersonName,jdbcType=VARCHAR},
+            </if>
+            <if test="addPersonSchool != null">
+                #{addPersonSchool,jdbcType=VARCHAR},
+            </if>
+            <if test="classification != null">
+                #{classification,jdbcType=VARCHAR},
+            </if>
+            <if test="classificationRank != null">
+                #{classificationRank,jdbcType=BIGINT},
+            </if>
+            <if test="parentClassificationId != null">
+                #{parentClassificationId,jdbcType=VARCHAR},
+            </if>
+            <if test="isDisplay != null">
+                #{isDisplay,jdbcType=BIGINT},
+            </if>
+            <if test="gmtCreate != null">
+                #{gmtCreate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="gmtModified != null">
+                #{gmtModified,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.example.demo.reading.model.po.BookClassificationPoExample"
+            resultType="java.lang.Integer">
+        select count(*) from book_classification
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update book_classification
+        <set>
+            <if test="record.id != null">
+                id = #{record.id,jdbcType=BIGINT},
+            </if>
+            <if test="record.classificationId != null">
+                classification_id = #{record.classificationId,jdbcType=VARCHAR},
+            </if>
+            <if test="record.classificationName != null">
+                classification_name = #{record.classificationName,jdbcType=VARCHAR},
+            </if>
+            <if test="record.addPersonName != null">
+                add_person_name = #{record.addPersonName,jdbcType=VARCHAR},
+            </if>
+            <if test="record.addPersonSchool != null">
+                add_person_school = #{record.addPersonSchool,jdbcType=VARCHAR},
+            </if>
+            <if test="record.classification != null">
+                classification = #{record.classification,jdbcType=VARCHAR},
+            </if>
+            <if test="record.classificationRank != null">
+                classification_rank = #{record.classificationRank,jdbcType=BIGINT},
+            </if>
+            <if test="record.parentClassificationId != null">
+                parent_classification_id = #{record.parentClassificationId,jdbcType=VARCHAR},
+            </if>
+            <if test="record.isDisplay != null">
+                is_display = #{record.isDisplay,jdbcType=BIGINT},
+            </if>
+            <if test="record.gmtCreate != null">
+                gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.gmtModified != null">
+                gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update book_classification
+        set id = #{record.id,jdbcType=BIGINT},
+        classification_id = #{record.classificationId,jdbcType=VARCHAR},
+        classification_name = #{record.classificationName,jdbcType=VARCHAR},
+        add_person_name = #{record.addPersonName,jdbcType=VARCHAR},
+        add_person_school = #{record.addPersonSchool,jdbcType=VARCHAR},
+        classification = #{record.classification,jdbcType=VARCHAR},
+        classification_rank = #{record.classificationRank,jdbcType=BIGINT},
+        parent_classification_id = #{record.parentClassificationId,jdbcType=VARCHAR},
+        is_display = #{record.isDisplay,jdbcType=BIGINT},
+        gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+        gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.reading.model.po.BookClassificationPo">
+        update book_classification
+        <set>
+            <if test="classificationId != null">
+                classification_id = #{classificationId,jdbcType=VARCHAR},
+            </if>
+            <if test="classificationName != null">
+                classification_name = #{classificationName,jdbcType=VARCHAR},
+            </if>
+            <if test="addPersonName != null">
+                add_person_name = #{addPersonName,jdbcType=VARCHAR},
+            </if>
+            <if test="addPersonSchool != null">
+                add_person_school = #{addPersonSchool,jdbcType=VARCHAR},
+            </if>
+            <if test="classification != null">
+                classification = #{classification,jdbcType=VARCHAR},
+            </if>
+            <if test="classificationRank != null">
+                classification_rank = #{classificationRank,jdbcType=BIGINT},
+            </if>
+            <if test="parentClassificationId != null">
+                parent_classification_id = #{parentClassificationId,jdbcType=VARCHAR},
+            </if>
+            <if test="isDisplay != null">
+                is_display = #{isDisplay,jdbcType=BIGINT},
+            </if>
+            <if test="gmtCreate != null">
+                gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="gmtModified != null">
+                gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.example.demo.reading.model.po.BookClassificationPo">
+        update book_classification
+        set classification_id = #{classificationId,jdbcType=VARCHAR},
+        classification_name = #{classificationName,jdbcType=VARCHAR},
+        add_person_name = #{addPersonName,jdbcType=VARCHAR},
+        add_person_school = #{addPersonSchool,jdbcType=VARCHAR},
+        classification = #{classification,jdbcType=VARCHAR},
+        classification_rank = #{classificationRank,jdbcType=BIGINT},
+        parent_classification_id = #{parentClassificationId,jdbcType=VARCHAR},
+        is_display = #{isDisplay,jdbcType=BIGINT},
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <select id="getClassfiyNameByClassfiyId" resultType="java.lang.String"
+            parameterType="java.lang.String">
+        select classification_name FROM  book_classification WHERE classification_id = #{classfiyId,jdbcType=VARCHAR}
+    </select>
+</mapper>

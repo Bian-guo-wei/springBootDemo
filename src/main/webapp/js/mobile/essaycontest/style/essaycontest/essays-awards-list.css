@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    font-family: "Microsoft Yahei", "微软雅黑", Arial, Helvetica, sans-serif;
+    /*background: #f1f4f9;*/
+}
+
+/*搜索框*/
+.search {
+    width: 100%;
+    background: #4e9fee;
+    height: .75rem;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    /*line-height: 1;*/
+}
+
+.search-fl {
+    width: 95%;
+    margin: auto;
+    background: #fff;
+    height: 70%;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+.icon {
+    width: 32px;
+    height: 100%;
+    background: url("../../images/essaycontest/search.png") center center no-repeat;
+    max-width: 100%;
+}
+
+.search-inp {
+    width: .8rem;
+    border: none;
+    background: #fff;
+    outline: none;
+    font-size: .2rem;
+}
+
+/*获奖列表*/
+.content {
+    width: 100%;
+    background: #fff;
+}
+
+.list_top {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    width: 100%;
+    height: .5rem;
+    font-size: .25rem;
+    padding-left: 9%;
+    color: #fff;
+    background: #acd9f8;
+}
+
+.list_top > div {
+    text-align: center;
+}
+
+.name {
+    width: 20%;
+}
+
+.student_number {
+    width: 25%;
+}
+
+.department {
+    width: 30%;
+}
+
+.award_rating {
+    width: 25%;
+}
+
+.list_box {
+    font-size: .26rem;
+    color: #333;
+}
+
+.list_one {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    width: 100%;
+    height: 1rem;
+}
+
+.sort_box {
+    width: 9%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sort {
+    width: 0.3rem;
+    height: .3rem;
+    line-height: .3rem;
+    border-radius: 3px;
+    text-align: center;
+
+}
+
+.sort_1 {
+    background: #fc2132;
+    color: #fff;
+}
+
+.sort_2 {
+    background: #eb6100;
+    color: #fff;
+}
+
+.sort_3 {
+    background: #f19149;
+    color: #fff;
+}
+
+.list_content {
+    width: 91%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    border-bottom: 1px solid #dad6d6;
+}
+
+.list_content > div {
+    text-align: center;
+}

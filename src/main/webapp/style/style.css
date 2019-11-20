@@ -1,0 +1,821 @@
+body {
+    box-sizing: border-box;
+}
+
+li, ul {
+    list-style: none;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    width: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    background: #2a4f86;
+    padding: 15px 0;
+}
+
+.logo {
+    float: left;
+}
+
+.banner {
+    width: 100%;
+}
+
+.nav {
+    float: right;
+    padding-top: 40px;
+}
+
+.nav a {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.banner {
+    background: url(../images/banner.jpg) center no-repeat;
+    width: 100%;
+    height: 444px;
+    background-size: 100% 100%;
+}
+
+.ny-banner {
+    background: url(../images/nyban.jpg) center no-repeat;
+    width: 100%;
+    height: 220px;
+    background-size: 100% 100%;
+}
+
+.main {
+    padding: 20px 0;
+}
+
+.wrap {
+    width: 100%;
+    background: #f4f8fe;
+    padding-bottom: 30px;
+}
+
+.title {
+    background: #2a4f86;
+    padding: 10px;
+}
+
+.til-left {
+    color: #fff;
+    font-size: 18px;
+    background: url(../images/icn1.jpg) left center no-repeat;
+    padding-left: 30px;
+    line-height: 25px;
+    margin-right: 15px;
+}
+
+.til-more {
+    color: #fff;
+    line-height: 25px;
+}
+
+a:hover.til-more {
+    color: #fff;
+}
+
+.til-nav {
+    float: left;
+}
+
+.til-nav a {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 15px;
+    background: #4e6d9a;
+    color: #fff;
+    margin-right: 9px;
+    box-sizing: border-box;
+}
+
+.til-nav a:hover {
+    color: #fff;
+}
+
+.bookBox {
+    background: #fff;
+    width: 100%;
+    border: 1px solid #d6d6d6;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.boox_cont {
+    margin-top: 20px;
+}
+
+.bookBox a {
+    display: block;
+    width: 100%;
+}
+
+.bookPic {
+    width: 100%;
+}
+
+.bookPic img {
+    display: block;
+    width: 100%;
+    height: 226px;
+}
+
+.bookTxt {
+    margin: 5px 0 0 0;
+    height: 22px;
+    line-height: 22px;
+    color: #1e1d1d;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slideCont {
+    margin-top: 20px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    font-size: 18px;
+}
+
+.swiper-father {
+    width: 100%;
+    height: 245px !important;
+    position: relative;
+    padding: 0 25px;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 0 !important;
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 0 !important;
+}
+
+.swiper-slide {
+    height: 215px !important;
+}
+
+.slideCont {
+    height: 245px;
+    padding: 0 15px;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0 !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    width: 15px !important;
+    height: 20px !important;
+    background-size: 15px 20px !important;
+    outline: none;
+}
+
+.bookInfo {
+    width: 100%;
+    height: 100%;
+    background: #dce9fd;
+    box-sizing: border-box;
+}
+
+.bookInfo {
+    padding: 15px 10px 0 10px;
+}
+
+.booInfo-img img {
+    display: block;
+    height: 186px;
+    width: 140px;
+}
+
+.bookInfo-txt {
+    width: 195px;
+    padding-left: 20px;
+}
+
+.bookName a {
+    color: #1e1d1d;
+    font-size: 16px;
+    display: block;
+    overflow: hidden;
+}
+
+.bookJs {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    color: #1e1d1d;
+    line-height: 30px;
+}
+
+.ft_lt {
+    padding-top: 77px;
+    font-size: 16px;
+}
+
+.ft_lt {
+    float: left;
+    color: #fff;
+}
+
+.ermPic img {
+    display: block;
+    width: 146px;
+    height: 146px;
+}
+
+.fr_erm {
+    float: right;
+    margin-left: 35px;
+}
+
+.fr_erm p {
+    color: #fff;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+/*经典阅读*/
+.nyTil {
+    position: relative;
+}
+
+.nyTil {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.ny-exit {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    color: #fff;
+    font-size: 14px;
+}
+
+a:hover.ny-exit {
+    color: #fff;
+}
+
+.ny-main {
+    padding: 0 0 20px 0;
+}
+
+.left {
+    float: left;
+    width: 166px;
+    padding: 5px;
+    background: #2a4f86;
+    margin-top: 20px;
+}
+
+.lftTil {
+    background: url(../images/tilbg.jpg) center no-repeat;
+    width: 152px;
+    height: 74px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 74px;
+    text-align: center;
+}
+
+.lftNav {
+    margin: 0;
+    padding: 0;
+}
+
+.lftNav li {
+    border-bottom: 2px solid #55729e;
+}
+
+.lftNav li:first-child {
+    margin-top: 10px;
+}
+
+.lftnav-f {
+    height: 40px;
+}
+
+.lftNav li.current .lftnav-f {
+    background: url(../images/nav1.jpg) center no-repeat;
+}
+
+.lftNav li.current .lftnav-f a {
+    color: #2a4f86;
+}
+
+.lftNav li:hover .lftnav-f {
+    background: url(../images/nav1.jpg) center no-repeat;
+}
+
+.lftNav li:hover .lftnav-f {
+    color: #2a4f86;
+    text-decoration: none;
+}
+
+.lftnav-f a {
+    display: block;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.lftnav-f a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.lftnav-sub {
+    padding-left: 49px;
+    display: none;
+}
+
+.lftnav-sub a {
+    display: block;
+    width: 106px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: #4e6d9a;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.lftnav-sub a:first-child {
+    margin-top: 5px;
+}
+
+.lftnav-sub a:hover {
+    color: #2a4f86;
+    background: url(../images/nav2.jpg) center no-repeat;
+}
+
+.lftnav-sub a.current {
+    background: url(../images/nav2.jpg) center no-repeat;
+}
+
+.lftnav-f a:focus, .lftnav-f a:hover {
+    color: #2a4f86;
+    text-decoration: none;
+}
+
+.sidebar-wrapper {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+}
+
+#dowebok {
+    background-color: #2a4f86;
+}
+
+#dowebok .sildernav {
+    margin-top: 50px;
+    line-height: 40px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#dowebok .sildernav a {
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#dowebok .sildernav a:hover {
+    background-color: #3b67a9;
+}
+
+[data-simplersidebar='active'] {
+    box-shadow: -3px 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-icn {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    display: none;
+}
+
+.sidebar-icn #toggle-sidebar {
+    background: url(../images/flicn.png) center no-repeat;
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-size: cover;
+}
+
+.sildernav-til {
+    color: #fff;
+    font-size: 18px;
+}
+
+.sildernav-sub {
+    padding-left: 25px;
+}
+
+#dowebok .sildernav .sildernav-til a {
+    padding: 0 0 0 20px;
+}
+
+.right {
+    float: left;
+    width: 1034px;
+}
+
+.right .bookPic img {
+    height: 186px;
+}
+
+.nyRigh {
+    margin-top: 15px;
+    padding: 0 30px;
+}
+
+.ydTxt {
+    line-height: 26px;
+    margin: 0;
+    text-indent: 2em;
+    margin-bottom: 8px;
+}
+
+.tsny-hd {
+    padding-bottom: 20px;
+}
+
+.tsny-lft {
+    float: left;
+    border: 1px solid #b5b5b5;
+    padding: 5px;
+}
+
+.tsny-lft img {
+    display: block;
+    width: 153px;
+    height: 212px;
+}
+
+.tsny-rg {
+    box-sizing: border-box;
+    width: 785px;
+    padding-left: 40px;
+    float: left;
+}
+
+.tsny-bookname {
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.tsny-info {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.tsny-info dt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 26px;
+}
+
+.tsny-info dd {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 125px;
+    line-height: 26px;
+}
+
+.tsny-op {
+    float: right;
+}
+
+.tsny-op a {
+    display: inline-block;
+    background: #3e6092;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    color: #fff;
+    font-size: 14px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.tsny-op a:hover {
+    color: #fff;
+}
+
+/*阅读书目*/
+.smList {
+    padding: 0;
+}
+
+.smList li {
+    border-bottom: 1px dashed #d6dadf;
+    padding: 10px 0;
+    line-height: 30px;
+}
+
+.smList-til {
+    color: #2a4f86;
+    font-size: 16px;
+}
+
+.smList-time {
+    color: #727272;
+    font-size: 14px;
+}
+
+.smList-txt {
+    margin: 0;
+}
+
+.page {
+    text-align: right;
+}
+
+.page a {
+    display: inline-block;
+    height: 24px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    padding: 0 13px;
+    line-height: 24px;
+    color: #000;
+    margin-left: 8px;
+    margin-top: 15px;
+}
+
+.pageInput {
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    height: 24px;
+    width: 35px;
+    outline: none;
+    margin-left: 8px;
+    margin-top: 15px;
+}
+
+.page span {
+    line-height: 26px;
+    margin-left: 8px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 980px) {
+    .center {
+        width: 100%;
+    }
+
+    .logo {
+        float: none;
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    .logo img {
+        display: inline-block;
+        width: 65%;
+    }
+
+    .nav {
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+
+    .nav a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .banner {
+        height: 180px;
+    }
+
+    .ny-banner {
+        height: 130px;
+    }
+
+    .main {
+        padding: 0;
+    }
+
+    .til-left {
+        font-size: 18px;
+        background-size: 18px auto;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 25px;
+    }
+
+    .til-more {
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .til-nav {
+        float: none;
+    }
+
+    .til-nav a {
+        margin-top: 10px;
+        margin-right: 9px;
+    }
+
+    .bookPic img {
+        height: 180px !important;
+    }
+
+    .bookTxt {
+        font-size: 16px;
+    }
+
+    .bookInfo-txt {
+        width: 160px;
+    }
+
+    .ft_lt {
+        float: none;
+        font-size: 12px;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .fr_erm {
+        width: 50%;
+        float: left;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .fr_erm img {
+        width: 120px;
+        height: 120px;
+        display: inline-block;
+    }
+
+    .booInfo-img img {
+        width: 120px;
+        height: 165px;
+    }
+
+    .ny-main {
+        padding: 0 0 20px 0;
+        box-sizing: border-box;
+    }
+
+    .nyTil {
+        font-size: 18px;
+        padding: 5px 20px;
+    }
+
+    .ny-exit {
+        top: 13px;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .sidebar-icn {
+        display: block;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .nyRigh {
+        padding: 0 10px;
+    }
+
+    .tsny-lft img {
+        width: 123px;
+        height: 171px;
+    }
+
+    .tsny-rg {
+        width: 100%;
+        margin-top: 10px;
+        padding-left: 0;
+    }
+
+    .swiper-father {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .bookPic img {
+        height: 300px !important;
+    }
+
+    .bookInfo-txt {
+        width: 350px;
+    }
+
+    .tsny-rg {
+        width: 570px;
+        float: left;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1046px) {
+    .bookInfo-txt {
+        width: 140px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .bookInfo-txt {
+        width: 140px;
+    }
+
+    .right {
+        width: 858px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .center {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .til-nav a {
+        margin-top: 10px;
+        margin-right: 5px;
+        width: 46%;
+        text-align: center;
+    }
+
+    .booInfo-img img {
+        width: 90px;
+        height: 140px;
+    }
+
+    .bookPic img {
+        height: 150px !important;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+}
+
+/*footer*/
+.footer {
+    width: 100%;
+    background: #2a4f86;
+    padding: 30px 0;
+}

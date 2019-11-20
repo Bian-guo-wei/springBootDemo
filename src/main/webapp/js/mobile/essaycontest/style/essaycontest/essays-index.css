@@ -1,0 +1,260 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+a{
+    text-decoration: none;
+}
+html,body{
+    font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+    background: #f1f4f9;
+}
+/*搜索框*/
+.search{
+    width: 100%;
+    background: #4e9fee;
+    height: .75rem;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.search-fl{
+    width: 95%;
+    margin: auto;
+    background: #fff;
+    height: 70%;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    justify-content:center;
+}
+.icon{
+    width: 32px;
+    height: 100%;
+    background: url("../../images/essaycontest/search.png") center center no-repeat;
+    max-width: 100%;
+}
+.search-inp{
+    width: .8rem;
+    border: none;
+    background: #fff;
+    outline: none;
+    font-size: .2rem;
+}
+/*内容区*/
+.content-wrap{
+    width: 90%;
+    margin: auto;
+}
+/*轮播*/
+.carousel{
+    width: 100%;
+    height: 3rem;
+    margin: 2% 0;
+    position: relative;
+    overflow: hidden;
+}
+.view-move{
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: nowrap;
+}
+.view-move>img{
+    vertical-align: middle;
+    height: 2.8rem;
+    border-radius: 5px;
+}
+
+/*阅读、征文、交换捐赠、问卷入口*/
+.entray_wrap {
+    width: 100%;
+    height: 160px;
+    background: #fff;
+    margin-bottom: 4%;
+    font-size: .21rem;
+    color: #999;
+}
+
+.entray_box {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    /*display: flex;*/
+    /*display: -webkit-flex;*/
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+}
+
+.entray_box div {
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    height: 80px;
+}
+
+.img_1 {
+    width: 50px;
+    height: 50px;
+}
+
+.img_2 {
+    width: 50px;
+    height: 50px;
+}
+
+.img_3 {
+    width: 50px;
+    height: 50px;
+}
+
+.img_4 {
+    width: 35px;
+    height: 35px;
+    margin: 7px 0;
+}
+
+.entray_box p {
+    color: #999;
+    text-align: center;
+}
+/*经典阅读*/
+.classic-reading{
+    width: 100%;
+}
+.reading-top{
+    width: 92%;
+    margin-left: 5%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content:space-between;
+    font-size: .25rem;
+}
+.reading-sign>img{
+    vertical-align: middle;
+    width: .27rem;
+    height: .32rem;
+}
+.classics{
+    vertical-align: middle;
+    padding-left: 5px;
+    font-weight: 600;
+}
+.reading-more{
+    font-size: .2rem;
+}
+.more-icon{
+    display: inline-block;
+    vertical-align: middle;
+    width: .23rem;
+    height: .23rem;
+}
+.all{
+    display: inline-block;
+    color: #fe2a54;
+    vertical-align: middle;
+}
+.reading-content{
+    margin: 3% 0;
+    width: 100%;
+    height: 3.5rem;
+    background: #fff;
+}
+.content-box{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content:space-between;
+}
+.reading-img{
+    width: 30%;
+    height: 100%;
+}
+
+.reading-img p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+
+}
+.reading-img img{
+    width: 100%;
+    height: 71%;
+    padding-top: 5%;
+}
+.p1{
+    font-size: .24rem;
+}
+.p2{
+    font-size: .21rem;
+    color: #999;
+}
+/*征文大赛*/
+.essays-list{
+    width: 100%;
+    margin: 3% 0;
+}
+.list-ul{
+    width: 100%;
+    margin: auto;
+}
+.essays-list li{
+    height: 1.5rem;
+    background: #fff;
+    margin-bottom: 4%;
+}
+.li-box{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content:space-between;
+}
+.list-img{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.list-img img{
+    display: block;
+    width: 90%;
+    height: 90%;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+.list-p{
+    width: 55%;
+    padding-left:3%;
+}
+.p3{
+    width: 100%;
+    font-size: .24rem;
+    margin-top: 8%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color: #333;
+}
+.p4{
+    width: 100%;
+    font-size: .22rem;
+    color: #999;
+    margin-top: 2%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}

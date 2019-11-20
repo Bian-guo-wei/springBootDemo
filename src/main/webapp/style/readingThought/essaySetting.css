@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font: 12px/1.5 宋体, Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+/*内容区*/
+.content_wrap {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.main_content {
+
+}
+
+.content_top {
+
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #a4a4a4;
+    background: #efefef;
+    padding-left: 15px;
+    position: relative;
+}
+
+.content_top i.icon {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    background: url(../../images/readingThought/icons.gif) no-repeat;
+    width: 4px;
+    height: 7px;
+    background-position: left -31px;
+    margin: 11px 8px 0px 0px;
+}
+
+.back {
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    line-height: 35px;
+    color: #4e9fee;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+}
+
+.publish_box {
+    width: 100%;
+    padding: 50px 0 0 100px;
+}
+
+.publish_box .works {
+    margin-top: 20px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.publish_box .works_content {
+    /*width: 250px;*/
+    /*height: 200px;*/
+}
+
+.works_content {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+
+}
+
+.works_name input, .authors input, .works_cover input {
+    width: 170px;
+    height: 25px;
+}
+
+.works_name select {
+    width: 170px;
+    height: 25px;
+    border: 1px solid #cacaca;
+}
+
+.works_cover {
+    text-indent: 2em;
+}
+
+.work_title {
+    display: flex;
+    display: -webkit-flex;
+    text-indent: 2em;
+}
+
+.work_title > div {
+    width: 120px;
+    text-align: left;
+}
+
+.authors {
+    text-indent: 2em;
+}
+
+.upload {
+    color: #4e9fee;
+}
+
+#range {
+    height: 25px;
+    width: 170px;
+    border: 1px solid #cacaca;
+}
+
+.button {
+    padding-left: 58px;
+}
+
+.button input {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+

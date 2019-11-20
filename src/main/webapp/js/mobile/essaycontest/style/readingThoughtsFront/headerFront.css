@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, textarea {
+    outline: none;
+}
+
+body {
+    /*width: 100%;*/
+    background: #f5f5f5;
+    font-family: 黑体, Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.wrap {
+    width: 100%;
+    min-width: 1200px;
+    position: relative;
+}
+
+/*头部*/
+.header {
+    width: 100%;
+}
+.head_box {
+    width: 1200px;
+    height: 1rem;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .35rem;
+}
+
+.logo_image {
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.personal_back{
+    height: 50px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.person {
+    font-size: 16px;
+    color: #e46941;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.head_box img {
+    height: 85%;
+}
+.nav_bar{
+    height: 25px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: "宋体";
+}
+.nav_bar li{
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    /*color: #486491;*/
+    color: #315184;
+}
+.nav_bar li:hover{
+    color: #e46941;
+}

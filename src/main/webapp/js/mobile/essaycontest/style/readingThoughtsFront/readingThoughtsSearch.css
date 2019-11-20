@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: 黑体, Arial, Helvetica, sans-serif;;
+}
+
+input {
+    outline: none;
+}
+
+/*弹框*/
+.reading_hidden {
+    width: 100%;
+    /*height: 100%;*/
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.hidden_box {
+    width: 700px;
+    height: 400px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.back_icon {
+    width: 99%;
+    margin: auto;
+    text-align: right;
+    cursor: pointer;
+    padding-top: 2px;
+}
+
+.hidden_title {
+    width: 97%;
+    margin: auto;
+    text-align: center;
+    border-bottom: 2px solid #d3cdc9;
+    font-size: 18px;
+    padding: 15px 0;
+    color: #333;
+}
+
+.hidden_content {
+    width: 99%;
+    height: 280px;
+    margin: 10px auto;
+    padding: 0 20px;
+    overflow: hidden;
+    color: #6f6f6f;
+    line-height: 30px;
+}
+
+/*阅读感悟查看区*/
+.reading_thought_wrap {
+    width: 70%;
+    /*width: 1200px;*/
+    margin: auto;
+}
+
+.reading_icon {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.reading_icon > img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.reading_icon > span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #aaa;
+}
+
+.reading_box {
+    width: 100%;
+    background: #fff;
+    padding: 30px 0 5px 0;
+}
+
+.reading_list_box {
+    width: 90%;
+    margin: auto;
+}
+
+.reading_list_box ul {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.reading_list_box ul li {
+    width: 14%;
+    border: 1px solid #ccc;
+    margin: 0 0 -1px -1px;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    text-indent: 1em;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.reading_list_box .top_ul li {
+    text-align: center;
+    background: #c4bcb8;
+    color: #fff;
+    text-indent: 0;
+    font-size: 16px;
+}
+
+.reading_list_box ul .college_li {
+    text-align: center;
+    text-indent: 0;
+}
+
+.reading_list_box ul .title_li {
+    width: 30%;
+}
+
+.look_over {
+    color: #00aaf5;
+}
+
+/*分页*/
+.pages {
+    width: 90%;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    margin: 30px auto;
+    line-height: 24px;
+}
+
+.pages > * {
+    margin-left: 5px;
+}
+
+.first_page, .last_page, .pre_page, .next_page {
+    cursor: pointer;
+}
+
+.pages_list {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.pages_list {
+    cursor: pointer;
+}
+.pages_list .active_li {
+    color: #e46941;
+}
+
+.to_numpages > input {
+    width: 50px;
+    margin: 0 3px;
+}
+
+.sure_go > input {
+    background: #e46941;
+    color: #fff;
+    width: 35px;
+    border-radius: 3px;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #e46941;
+    cursor: pointer;
+}

@@ -1,0 +1,80 @@
+.navigation_menu {
+    width: 165px;
+    background: #e1ecff;
+    position: relative;
+    /*padding-bottom: 20px;*/
+}
+
+.menu_title {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    font-family: 黑体;
+    font-size: 18px;
+    font-weight: normal;
+    padding-left: 10px;
+}
+
+.navigation_menu .tit {
+    height: 32px;
+    background: url(../../images/readingThought/tree_tit.gif) repeat-x;
+}
+
+.navigation_menu .tit a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    color: #fff;
+    background: url(../../images/readingThought/icons.gif) no-repeat 170px 10px;
+    padding-left: 10px;
+}
+
+.navigation_menu ul li {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #c1cee4;
+    padding-left: 20px;
+    color: #0487e3;
+}
+
+.navigation_menu ul li a {
+    color: #333;
+}
+
+.navigation_menu ul li .active {
+    color: #f96105;
+}
+
+.navigation_menu ul li a.cur {
+    font-weight: bold;
+    color: #006699;
+}
+
+.navigation_menu ul li a:hover {
+    color: #f96105;
+}
+
+.shrink {
+    height: 100%;
+    width: 13px;
+    background: url(../../images/readingThought/shousuo_bg.png) repeat-y;
+    top: 0;
+    right: -5px;
+    z-index: 999;
+    position: absolute;
+}
+
+#switchPoint {
+    display: block;
+    width: 8px;
+    height: 56px;
+    /*background: url(../images/ss.gif) no-repeat;*/
+}
+
+#switchPoint img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font: 12px/1.5 宋体, Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+/*内容区*/
+.content_wrap {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.main_content {
+
+}
+
+.content_top {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #a4a4a4;
+    background: #efefef;
+    padding-left: 15px;
+    position: relative;
+}
+
+.content_top i.icon {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    background: url(../../images/readingThought/icons.gif) no-repeat;
+    width: 4px;
+    height: 7px;
+    background-position: left -31px;
+    margin: 11px 8px 0px 0px;
+}
+
+.back {
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    line-height: 35px;
+    color: #4e9fee;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+}
+.tab_head{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 20px;
+    height: 30px;
+}
+.tab_one{
+    color: #333;
+    margin-right: 50px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.active_tab{
+    color: #00aaf5;
+}
+.publish_box {
+    width: 100%;
+    padding: 20px 0 0 80px;
+}
+
+.input_box {
+    display: flex;
+    display: -webkit-flex;
+    margin-top: 25px
+}
+
+.left_box {
+    width: 120px;
+    text-align: right;
+    line-height: 25px
+}
+.left_box select{
+    width: 50px;
+    height: 25px;
+}
+.right_box{
+    margin-left: 5px;
+}
+.left_box>button{
+    width: 18px;
+    height: 18px;
+}
+.right_box input, .right_box select {
+    width: 170px;
+    height: 25px;
+}
+
+.button {
+    padding-left: 90px;
+    margin-top: 35px
+}
+
+.button input {
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+.btn_box{
+    margin-left: 150px;
+}
+.submit_btn{
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    background: #4d9fea;
+    border: none;
+    margin-top: 40px;
+    font-size: 14px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,463 @@
+
+/*背景图片*/
+.bg_image {
+    width: 100%;
+    height: 160px;
+    background: url("../../images/readingThoughtsFront/banner.jpg") center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg_wrap {
+    width: 1200px;
+    margin: auto;
+    color: #fff;
+    font-size: 25px;
+    height: 100%;
+    line-height: 170px;
+}
+
+.bg_wrap img {
+    width: 56px;
+    height: 57px;
+    vertical-align: middle;
+}
+
+.bg_wrap span {
+    display: inline-block;
+    height: 100%;
+}
+
+/*内容区*/
+.content_wrap {
+    width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    padding-bottom: 50px;
+}
+
+.content_box {
+    width: 95%;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.half_cont{
+    width: 49.5%;
+}
+.content_top {
+    display: -webkit-flex;
+    display: flex;
+    /*align-items: center;*/
+    padding: 20px 0;
+}
+
+.content_top > div {
+    margin-top: 70px;
+}
+.content_top > img {
+    width: 150px;
+    height: 220px;
+    display: block;
+    margin-right: 10px;
+}
+.share_box a{
+    font-size: 12px;
+}
+.btn {
+    background: #5e443b;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 20px;
+    height: 28px;
+    margin-bottom: 10px;
+}
+
+.book_information {
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.book_information ul li {
+    display: -webkit-flex;
+    display: flex;
+    line-height: 25px;
+    font-size: 15px;
+    color: #5e443b;
+}
+
+.book_information ul .left {
+    width: 25%;
+    font-weight: bold;
+}
+
+.book_information ul .right {
+    width: 87%;
+}
+
+.book_thoughts {
+    padding: 20px 0;
+    position: relative;
+}
+
+.thoughts_top {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.thoughts_top > img {
+    display: block;
+    vertical-align: middle;
+}
+
+.more {
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    font-size: 15px;
+    color: #e46941;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.reading_thoughts {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 15px;
+}
+
+.thoughts_box {
+    width: 100%;
+}
+.thoughts_box .thoughts_box_title{
+    font-size: 16px;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    color: #e46941;
+}
+.thoughts_content {
+    width: 100%;
+    padding: 15px 15px 0 15px;
+    font-size: 15px;
+    background: #faf9f9;
+    margin: 20px 0;
+    line-height: 20px;
+
+}
+.over_box{
+    line-height: 22px;
+}
+.active_over{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.thoughts_content p {
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    position: relative;
+}
+.thoughts_content img{
+    width: 17px;
+    height: 17px;
+}
+.zan_num {
+    display: inline-block;
+    color: #f4af0a;
+    font-size: 13px;
+    position: absolute;
+    top: -10px;
+    right: -8px;
+}
+
+.comment_wrap {
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.comment_box {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.comment_box > img {
+    display: block;
+    vertical-align: middle;
+}
+
+.comment_word {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 15px;
+}
+
+.comment_text {
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+}
+
+.comment_text textarea {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f4af0a;
+    outline: none;
+}
+
+.comment_btn_box {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f4af0a;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comment_btn {
+    display: inline-block;
+    background: #e46941;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comment_lists {
+    padding: 10px 0;
+}
+
+.comment_list {
+    width: 100%;
+    padding: 15px 15px 5px 15px;
+    font-size: 13px;
+    background: #faf9f9;
+    margin: 20px 0;
+    line-height: 20px;
+}
+
+.operate {
+    width: 100%;
+    height: 30px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.zan {
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.zan_num {
+    display: inline-block;
+    color: #f4af0a;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -8px;
+}
+
+.reply {
+    width: 100%;
+    padding: 15px 15px 0 15px;
+    font-size: 13px;
+    background: #fdfaed;
+    margin: 20px 0;
+    line-height: 25px;
+    color: #999;
+}
+
+.reply span {
+    font-size: 14px;
+    color: #333;
+}
+
+.reply p {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+}
+
+.pull_more {
+    width: 100%;
+    height: 35px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*padding: 10px 0;*/
+    border-radius: 2px;
+}
+
+.pull_more_btn {
+    display: inline-block;
+    border: 1px solid #a3a1a1;
+    padding: 0px 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #5e443b;
+}
+
+.pull_more_btn > img {
+    vertical-align: middle;
+}
+
+/*底部*/
+.footer {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-top: 1px solid #d7d7d7;
+    margin-top: 50px;
+    color: #5e443b;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+}
+
+/*弹框*/
+.alert_wrap {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.alert_box {
+    width: 500px;
+    height: 230px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.alert_box_con {
+    padding: 0 10px;
+}
+
+.alert_top {
+    color: #333;
+    font-size: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f4af0a;
+    font-weight: bold;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alert_top > img {
+    cursor: pointer;
+}
+
+.name {
+    color: #333;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.alert_text {
+    width: 100%;
+    height: 100px;
+}
+
+.alert_text > textarea {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f4af0a;
+    outline: none;
+}
+
+.alert_btn {
+    width: 100%;
+    padding: 20px 0;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alert_comment_btn {
+    display: inline-block;
+    background: #e46941;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+/*分页*/
+.pages {
+    width: 90%;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    margin: 30px auto;
+    line-height: 24px;
+}
+
+.pages > * {
+    margin-left: 5px;
+}
+
+.first_page, .last_page, .pre_page, .next_page {
+    cursor: pointer;
+}
+
+.pages_list {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.pages_list {
+    cursor: pointer;
+}
+.pages_list .active_li {
+    color: #e46941;
+}
+
+.to_numpages > input {
+    width: 50px;
+    margin: 0 3px;
+}
+
+.sure_go > input {
+    background: #e46941;
+    color: #fff;
+    width: 35px;
+    border-radius: 3px;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #e46941;
+    cursor: pointer;
+}

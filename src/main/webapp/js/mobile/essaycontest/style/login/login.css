@@ -1,0 +1,476 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font: 12px/1.5 ����, Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.clearfix {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    font-size: 0px;
+    line-height: 0px;
+    overflow: hidden;
+}
+
+.icons {
+    float: left;
+    font-size: 0px;
+    line-height: 0px;
+    overflow: hidden;
+    display: inline;
+    background: url(../../images/icons.gif) no-repeat;
+}
+
+.iconsnb {
+    float: left;
+    background: url(../images/qqnbe.jpg) no-repeat;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.box {
+    width: 500px;
+    height: 260px;
+    padding: 25px;
+    overflow: hidden;
+    margin-top: 165px;
+}
+
+.box h1 {
+    height: 34px;
+    background: url(../../images/tit2.jpg) no-repeat center;
+}
+
+.box .con {
+    margin-top: 20px;
+    background: url(../../images/login_line.gif) no-repeat left top;
+    padding: 30px 30px 0
+}
+
+.box .con b {
+    float: left;
+    width: 90px;
+    height: 114px;
+    background: url(../../images/icons3.gif) no-repeat;
+}
+
+.box .con .login {
+    padding-left: 125px;
+    _float: left;
+    _padding-left: 25px;
+}
+
+.box .con .login td {
+    padding-top: 7px;
+    color: #01618f;
+}
+
+.box .con .login td .txt {
+    width: 220px;
+    height: 23px;
+    border: 1px solid #60bce7;
+}
+
+.box .con .login td img {
+    margin-left: 10px;
+}
+
+.box .con .login td .btn {
+    width: 95px;
+    height: 30px;
+    background: url(../../images/btn2.gif) no-repeat;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.rcBox {
+    position: relative;
+    zoom: 1;
+}
+
+.rcBox .rc {
+    position: absolute;
+}
+
+.rcBox .lt {
+    left: -1px;
+    top: -1px;
+}
+
+.rcBox .rt {
+    right: -1px;
+    top: -1px;
+}
+
+.rcBox .lb {
+    left: -1px;
+    bottom: -1px;
+}
+
+.rcBox .rb {
+    right: -1px;
+    bottom: -1px;
+}
+
+.Lsite .login {
+    height: 168px;
+    border: 1px solid #ccc;
+    padding: 5px 0 0 10px;
+    background: url(../../images/login.gif) repeat-x left top;
+}
+
+.Lsite .login .rc {
+    width: 5px;
+    height: 5px;
+}
+
+.Lsite .login .lt {
+    background-position: left -360px;
+}
+
+.Lsite .login .rt {
+    background-position: -5px -360px;
+}
+
+.Lsite .login .lb {
+    background-position: left -365px;
+}
+
+.Lsite .login .rb {
+    background-position: -5px -365px;
+}
+
+.Lsite .login .tit {
+    height: 27px;
+    line-height: 16px;
+    background: url(../images/login_tit_bg.gif) no-repeat;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.Lsite .login p {
+    padding: 20px;
+    font-size: 14px;
+}
+
+.Lsite .login p a {
+    float: right;
+    font-size: 12px;
+    color: #006699;
+    width: 50px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    background: url(../../images/icons.gif) no-repeat left -48px;
+}
+
+.Lsite .login .con {
+    padding-top: 6px;
+}
+
+.Lsite .login .con dt {
+    float: left;
+    width: 51px;
+    line-height: 21px;
+    text-align: right;
+}
+
+.Lsite .login .con dd {
+    padding-left: 59px;
+    margin-bottom: 8px;
+    *margin-bottom: 6px;
+}
+
+.Lsite .login .con .txt {
+    width: 132px;
+    height: 21px;
+    line-height: 21px;
+    border: 0;
+    background: #FFF;
+}
+
+.Lsite .login .con .btn {
+    width: 70px;
+    height: 24px;
+    background: url(../images/ss_input.gif) 0 -66px no-repeat;
+    border: 0;
+    line-height: 24px;
+    cursor: pointer;
+    margin-right: 7px;
+    color: #FFF;
+}
+
+.Lsite .login .con .btn2 {
+    background: url(../images/ss_input.gif) 0 -95px no-repeat;
+}
+
+.Lsite .online {
+    margin-top: 10px;
+    border: 1px solid #ceefff;
+    background: #e9f8ff;
+    padding: 6px;
+}
+
+.Lsite .online .rc {
+    width: 8px;
+    height: 8px;
+}
+
+.Lsite .online .lt {
+    background-position: left -166px;
+}
+
+.Lsite .online .rt {
+    background-position: -8px -166px;
+}
+
+.Lsite .online .lb {
+    background-position: left -174px;
+}
+
+.Lsite .online .rb {
+    background-position: -8px -174px;
+}
+
+.Lsite .online .con {
+    border: 1px solid #ceefff;
+    background: #fff;
+}
+
+.Lsite .online .con .tit {
+    height: 30px;
+    line-height: 30px;
+    background: url(../images/online_tit.gif) repeat-x;
+    border-bottom: 1px solid #ceefff;
+    font-size: 16px;
+    font-family: ΢���ź�;
+    color: #006699;
+    padding: 0 15px;
+}
+
+.Lsite .online .con .tit a {
+    float: right;
+    font-size: 12px;
+}
+
+.Lsite .online .con ul {
+    padding: 5px 14px 10px;
+    *padding: 10px 14px;
+}
+
+.Lsite .online .con li {
+    height: 23px;
+    line-height: 23px;
+    background: url(../images/QQ_bg.gif) repeat-x;
+    border: 1px solid #cdedfb;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.Lsite .online .con li .icons {
+    width: 15px;
+    height: 16px;
+    background-position: left -129px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+/**begin**/
+.Rsite .rsiteSearch {
+    background: url(../images/search_bg.gif) 0 -171px repeat-x;
+}
+
+.Rsite .rsiteSearch .rsiteSearch_l {
+    background: url(../images/search_bg.gif) left 0 no-repeat;
+}
+
+.Rsite .rsiteSearch .rsiteSearch_r {
+    background: url(../images/search_bg.gif) right -342px no-repeat;
+    height: 166px;
+}
+
+.Rsite .rsiteSearch .search_tit {
+    height: 30px;
+    font-size: 14px;
+    padding-left: 23px;
+}
+
+.Rsite .rsiteSearch .search_tit li {
+    float: left;
+    line-height: 30px;
+    width: 110px;
+    text-align: center;
+}
+
+.Rsite .rsiteSearch .search_tit li a {
+    color: #FFF;
+}
+
+.Rsite .rsiteSearch .search_tit li.cur {
+    background: url(../images/ss_input.gif) no-repeat;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+.Rsite .rsiteSearch .search_tit li.cur a {
+    color: #333;
+}
+
+.Rsite .rsiteSearch .duxiu_con {
+    padding: 15px 0 0 39px;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_ul li {
+    float: left;
+    display: inline;
+    margin-right: 22px;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_ul li a {
+    color: #3f5f7b;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_ul li.cur a {
+    color: #333;
+    font-weight: bold;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_input {
+    margin-top: 4px;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_input .txt {
+    float: left;
+    width: 467px;
+    height: 30px;
+    line-height: 30px;
+    background: #FFF;
+    border: 1px solid #d5d5d5;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_input .txt1 {
+    float: left;
+    width: 467px;
+    height: 30px;
+    line-height: 30px;
+    background: #FFF;
+    border: 1px solid #d5d5d5;
+}
+
+.Rsite .rsiteSearch .duxiu_con .select {
+    float: left;
+    display: inline;
+    margin-right: 5px;
+    height: 20px;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_input .btn {
+    width: 88px;
+    height: 32px;
+    float: left;
+    display: inline;
+    margin-left: 8px;
+    border: 0;
+    background: url(../images/ss_input.gif) 0 -29px no-repeat;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_input .jiansuo {
+    float: left;
+    display: inline;
+    margin-left: 14px;
+    line-height: 30px;
+    color: #3f5f7b;
+    text-decoration: underline;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_radio {
+    margin-top: 3px;
+    *margin-top: 1px;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_radio label {
+    margin-right: 15px;
+    *margin-right: 10px;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_radio label input {
+    margin: 0 7px 3px 0;
+    *margin: 0 4px 3px 0;
+}
+
+.Rsite .rsiteSearch .duxiu_con .ss_value {
+    margin-top: 16px;
+}
+
+/**end**/
+
+.wrap .foot {
+    height: 100px;
+    line-height: 100px;
+    border-top: 3px solid #cfe1f2;
+    margin-top: 10px;
+}
+
+.wrap .content .resource {
+    margin-top: 15px;
+}
+
+.wrap .content .resource .tit {
+    margin-bottom: 5px;
+}
+
+.wrap .content .resource .tit a {
+    color: #fff;
+    background: #0179d1;
+    padding: 2px 5px;
+}
+
+.wrap .content .resource .tit .txt {
+    width: 135px;
+    height: 17px;
+    border: 1px solid #bbb;
+}
+
+#pageinfo {
+    margin-top: 10px;
+    color: #888;
+}
+
+#pageinfo a {
+    border: 1px solid #888;
+    padding: 2px;
+    margin-left: -1px;
+}
+
+#pageinfo .txt {
+    width: 40px;
+}
+
+.wrap .ziyuan_nav li {
+    width: 151px;
+}

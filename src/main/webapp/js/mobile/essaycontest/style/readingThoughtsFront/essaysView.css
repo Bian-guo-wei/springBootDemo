@@ -1,0 +1,178 @@
+
+/*背景图片*/
+.bg_image {
+    width: 100%;
+    height: 160px;
+    background: url("../../images/readingThoughtsFront/banner.jpg") center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg_wrap {
+    width: 1200px;
+    margin: auto;
+    color: #fff;
+    font-size: 25px;
+    height: 100%;
+    line-height: 170px;
+}
+
+.bg_wrap img {
+    width: 56px;
+    height: 57px;
+    vertical-align: middle;
+}
+
+.bg_wrap span {
+    display: inline-block;
+    height: 100%;
+}
+
+/*内容区*/
+.content_wrap {
+    width: 1200px;
+    margin: auto;
+}
+
+.reading_icon {
+    width: 100%;
+    height: 50px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.reading_icon > img {
+    display: block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.reading_icon > span {
+    display: block;
+    color: #aaa;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.content_box {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 15px;
+    background: #fff;
+}
+
+.view_box {
+    width: 95%;
+    margin: auto;
+    font-size: 14px;
+    padding-bottom: 50px;
+}
+
+.view_top {
+    width: 100%;
+    height: 70px;
+    line-height: 80px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.view_bg {
+    width: 100%;
+    height: 250px;
+    background: url("../../images/readingThoughtsFront/view_bg.jpg") center center no-repeat;
+    background-size: 100% 180%;
+}
+
+.view_info {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.view_info p {
+    line-height: 20px;
+}
+
+.view_info .title {
+    color: #ec6941;
+}
+.view_info pre{
+    width: 100%;
+    white-space: pre-wrap;
+}
+.look {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.tolook{
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 3px;
+    background: #ec6941;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.works_submit{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.look a {
+    color: #ec6941;
+    font-size: 14px;
+}
+.view_poster{
+    display: -webkit-flex;
+    display: flex;
+
+}
+.view_poster p{
+    color: #ec6941;
+    line-height: 50px;
+}
+.look_poster{
+    display: inline-block;
+    width: 85px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 3px;
+    background: #ec6941;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.works_submit a {
+    width: 85px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 3px;
+    background: #ec6941;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+/*底部*/
+.footer {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-top: 1px solid #d7d7d7;
+    margin-top: 50px;
+    color: #5e443b;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+}

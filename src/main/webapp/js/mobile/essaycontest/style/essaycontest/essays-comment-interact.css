@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    font-family: "Microsoft Yahei", "微软雅黑", Arial, Helvetica, sans-serif;
+    background: #f1f4f9;
+}
+
+.list_wrap {
+    width: 100%;
+    /*padding: .2rem 0;*/
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.list_box {
+    width: 95%;
+    margin: auto;
+    font-size: .24rem;
+    color: #333;
+    padding-bottom: .2rem;
+}
+
+.list_box ul li {
+    padding: 3% 0;
+    border-bottom: 1px solid #eee;
+}
+
+.grade {
+    width: 85%;
+    margin: .8rem auto;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .21rem;
+}
+
+.good_reputation {
+    display: flex;
+    display: -webkit-flex;
+    /*justify-content: center;*/
+    align-items: center;
+    margin: 0 5%;
+}
+
+.good_reputation > img {
+    width: .2rem;
+    height: .2rem;
+    margin-right: 4%;
+}
+
+.num {
+    color: #e75d52;
+    margin: 0 1%;
+}
+
+.members {
+    color: #a1a1a1;
+    margin: 0 1%;
+}
+
+.comment {
+    color: #00aaf5;
+    margin: 0 2%;
+}
+
+.add_label {
+    width: .7rem;
+    color: #00aaf5;
+    border: 1px solid #00aaf5;
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    border-radius: .07rem;
+}
+
+.comment_title {
+    font-size: .24rem;
+    color: #a1a1a1;
+    width: 100%;
+    height: .4rem;
+    line-height: .4rem;
+    padding-left: .2rem;
+}
+
+.comment_list {
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    display: -webkit-flex;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.person_img {
+    width: 10%;
+    height: 100%;
+}
+
+.person_img > img {
+    width: 100%;
+    height: .6rem;
+    vertical-align: top;
+    border-radius: 3px;
+}
+
+.right_info {
+    margin: 0 2%;
+    width: 90%;
+}
+
+.personal_info {
+    width: 100%;
+    height: .6rem;
+}
+
+.name_box {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.name {
+    color: #00aaf5;
+    font-size: .24rem;
+    margin-right: 5%;
+}
+
+.attention {
+    font-size: .2rem;
+    border-radius: 2px;
+    width: .65rem;
+    height: .27rem;
+    text-align: center;
+    line-height: .27rem;
+    color: #00aaf5;
+    border: 1px solid #00aaf5;
+}
+
+.college {
+    font-size: .21rem;
+    color: #a1a1a1;
+}
+
+.comment_word {
+    margin-top: 2%;
+    min-height: .6rem;
+}
+
+.comment_p {
+    font-size: .24rem;
+    color: #333;
+}
+
+.comment_info {
+    font-size: .2rem;
+    color: #a1a1a1;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.operate_img > img {
+    width: .2rem;
+    height: .2rem;
+    margin-left: 5px;
+    /*vertical-align: middle;*/
+}

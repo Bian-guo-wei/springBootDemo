@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.reading.mapper.ClassicBooksMapper" >
+  <resultMap id="BaseResultMap" type="com.example.demo.reading.model.po.ClassicBooks" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="resource_id" property="resourceId" jdbcType="VARCHAR" />
+    <result column="basic_title" property="basicTitle" jdbcType="VARCHAR" />
+    <result column="basic_creator" property="basicCreator" jdbcType="VARCHAR" />
+    <result column="basic_publisher" property="basicPublisher" jdbcType="VARCHAR" />
+    <result column="basic_keyword" property="basicKeyword" jdbcType="VARCHAR" />
+    <result column="basic_contact" property="basicContact" jdbcType="VARCHAR" />
+    <result column="basic_source_name" property="basicSourceName" jdbcType="VARCHAR" />
+    <result column="basic_date" property="basicDate" jdbcType="VARCHAR" />
+    <result column="basic_identifier_1" property="basicIdentifier1" jdbcType="VARCHAR" />
+    <result column="basic_description" property="basicDescription" jdbcType="VARCHAR" />
+    <result column="basic_source_no" property="basicSourceNo" jdbcType="VARCHAR" />
+    <result column="basic_page" property="basicPage" jdbcType="VARCHAR" />
+    <result column="proc_year" property="procYear" jdbcType="VARCHAR" />
+    <result column="proc_enbody" property="procEnbody" jdbcType="VARCHAR" />
+    <result column="proc_class_id" property="procClassId" jdbcType="VARCHAR" />
+    <result column="proc_channel" property="procChannel" jdbcType="INTEGER" />
+    <result column="proc_dxid" property="procDxid" jdbcType="VARCHAR" />
+    <result column="proc_file_link" property="procFileLink" jdbcType="VARCHAR" />
+    <result column="proc_quote" property="procQuote" jdbcType="INTEGER" />
+    <result column="detaiurl" property="detaiurl" jdbcType="VARCHAR" />
+    <result column="yycount" property="yycount" jdbcType="INTEGER" />
+    <result column="impact_factor_ch" property="impactFactorCh" jdbcType="VARCHAR" />
+    <result column="impact_factor_en" property="impactFactorEn" jdbcType="VARCHAR" />
+    <result column="avenue" property="avenue" jdbcType="VARCHAR" />
+    <result column="cnki_yycount" property="cnkiYycount" jdbcType="VARCHAR" />
+    <result column="wf_yycount" property="wfYycount" jdbcType="VARCHAR" />
+    <result column="cqvip_yycount" property="cqvipYycount" jdbcType="VARCHAR" />
+    <result column="ware_page_view" property="warePageView" jdbcType="VARCHAR" />
+    <result column="download_count" property="downloadCount" jdbcType="VARCHAR" />
+    <result column="view_elements" property="viewElements" jdbcType="VARCHAR" />
+    <result column="view_elements_json" property="viewElementsJson" jdbcType="VARCHAR" />
+    <result column="foundation" property="foundation" jdbcType="VARCHAR" />
+    <result column="screenshot" property="screenshot" jdbcType="VARCHAR" />
+    <result column="basic_id_creator" property="basicIdCreator" jdbcType="VARCHAR" />
+    <result column="basic_id_keyword" property="basicIdKeyword" jdbcType="VARCHAR" />
+    <result column="basic_id_contact" property="basicIdContact" jdbcType="VARCHAR" />
+    <result column="avenue_type" property="avenueType" jdbcType="TINYINT" />
+    <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
+    <result column="gmt_modified" property="gmtModified" jdbcType="TIMESTAMP" />
+    <result column="proc_channel_id" property="procChannelId" jdbcType="VARCHAR" />
+    <result column="basic_contact_id" property="basicContactId" jdbcType="VARCHAR" />
+    <result column="basic_creator_id" property="basicCreatorId" jdbcType="VARCHAR" />
+    <result column="basic_keyword_id" property="basicKeywordId" jdbcType="VARCHAR" />
+    <result column="basic_id_date" property="basicIdDate" jdbcType="VARCHAR" />
+    <result column="basic_date_sort" property="basicDateSort" jdbcType="INTEGER" />
+    <result column="ssid" property="ssid" jdbcType="VARCHAR" />
+    <result column="magid" property="magid" jdbcType="VARCHAR" />
+    <result column="jourid" property="jourid" jdbcType="VARCHAR" />
+    <result column="original_project_res_id" property="originalProjectResId" jdbcType="VARCHAR" />
+    <result column="is_display" property="isDisplay" jdbcType="TINYINT" />
+    <result column="activity_id" property="activityId" jdbcType="INTEGER" />
+    <result column="book_classification" property="bookClassification" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, resource_id, basic_title, basic_creator, basic_publisher, basic_keyword, basic_contact, 
+    basic_source_name, basic_date, basic_identifier_1, basic_description, basic_source_no, 
+    basic_page, proc_year, proc_enbody, proc_class_id, proc_channel, proc_dxid, proc_file_link, 
+    proc_quote, detaiurl, yycount, impact_factor_ch, impact_factor_en, avenue, cnki_yycount, 
+    wf_yycount, cqvip_yycount, ware_page_view, download_count, view_elements, view_elements_json, 
+    foundation, screenshot, basic_id_creator, basic_id_keyword, basic_id_contact, avenue_type, 
+    gmt_create, gmt_modified, proc_channel_id, basic_contact_id, basic_creator_id, basic_keyword_id, 
+    basic_id_date, basic_date_sort, ssid, magid, jourid, original_project_res_id, is_display, 
+    activity_id, book_classification
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.example.demo.reading.model.po.ClassicBooksExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from classic_books
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from classic_books
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from classic_books
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.example.demo.reading.model.po.ClassicBooksExample" >
+    delete from classic_books
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.reading.model.po.ClassicBooks" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into classic_books (resource_id, basic_title, basic_creator,
+      basic_publisher, basic_keyword, basic_contact,
+      basic_source_name, basic_date, basic_identifier_1,
+      basic_description, basic_source_no, basic_page,
+      proc_year, proc_enbody, proc_class_id,
+      proc_channel, proc_dxid, proc_file_link,
+      proc_quote, detaiurl, yycount,
+      impact_factor_ch, impact_factor_en, avenue,
+      cnki_yycount, wf_yycount, cqvip_yycount,
+      ware_page_view, download_count, view_elements,
+      view_elements_json, foundation, screenshot,
+      basic_id_creator, basic_id_keyword, basic_id_contact,
+      avenue_type, gmt_create, gmt_modified,
+      proc_channel_id, basic_contact_id, basic_creator_id,
+      basic_keyword_id, basic_id_date, basic_date_sort,
+      ssid, magid, jourid,
+      original_project_res_id, is_display, activity_id,
+      book_classification)
+    values (#{resourceId,jdbcType=VARCHAR}, #{basicTitle,jdbcType=VARCHAR}, #{basicCreator,jdbcType=VARCHAR},
+      #{basicPublisher,jdbcType=VARCHAR}, #{basicKeyword,jdbcType=VARCHAR}, #{basicContact,jdbcType=VARCHAR},
+      #{basicSourceName,jdbcType=VARCHAR}, #{basicDate,jdbcType=VARCHAR}, #{basicIdentifier1,jdbcType=VARCHAR},
+      #{basicDescription,jdbcType=VARCHAR}, #{basicSourceNo,jdbcType=VARCHAR}, #{basicPage,jdbcType=VARCHAR},
+      #{procYear,jdbcType=VARCHAR}, #{procEnbody,jdbcType=VARCHAR}, #{procClassId,jdbcType=VARCHAR},
+      #{procChannel,jdbcType=INTEGER}, #{procDxid,jdbcType=VARCHAR}, #{procFileLink,jdbcType=VARCHAR},
+      #{procQuote,jdbcType=INTEGER}, #{detaiurl,jdbcType=VARCHAR}, #{yycount,jdbcType=INTEGER},
+      #{impactFactorCh,jdbcType=VARCHAR}, #{impactFactorEn,jdbcType=VARCHAR}, #{avenue,jdbcType=VARCHAR},
+      #{cnkiYycount,jdbcType=VARCHAR}, #{wfYycount,jdbcType=VARCHAR}, #{cqvipYycount,jdbcType=VARCHAR},
+      #{warePageView,jdbcType=VARCHAR}, #{downloadCount,jdbcType=VARCHAR}, #{viewElements,jdbcType=VARCHAR},
+      #{viewElementsJson,jdbcType=VARCHAR}, #{foundation,jdbcType=VARCHAR}, #{screenshot,jdbcType=VARCHAR},
+      #{basicIdCreator,jdbcType=VARCHAR}, #{basicIdKeyword,jdbcType=VARCHAR}, #{basicIdContact,jdbcType=VARCHAR},
+      #{avenueType,jdbcType=TINYINT}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP},
+      #{procChannelId,jdbcType=VARCHAR}, #{basicContactId,jdbcType=VARCHAR}, #{basicCreatorId,jdbcType=VARCHAR},
+      #{basicKeywordId,jdbcType=VARCHAR}, #{basicIdDate,jdbcType=VARCHAR}, #{basicDateSort,jdbcType=INTEGER},
+      #{ssid,jdbcType=VARCHAR}, #{magid,jdbcType=VARCHAR}, #{jourid,jdbcType=VARCHAR},
+      #{originalProjectResId,jdbcType=VARCHAR}, #{isDisplay,jdbcType=TINYINT}, #{activityId,jdbcType=INTEGER},
+      #{bookClassification,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.reading.model.po.ClassicBooks" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into classic_books
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="resourceId != null" >
+        resource_id,
+      </if>
+      <if test="basicTitle != null" >
+        basic_title,
+      </if>
+      <if test="basicCreator != null" >
+        basic_creator,
+      </if>
+      <if test="basicPublisher != null" >
+        basic_publisher,
+      </if>
+      <if test="basicKeyword != null" >
+        basic_keyword,
+      </if>
+      <if test="basicContact != null" >
+        basic_contact,
+      </if>
+      <if test="basicSourceName != null" >
+        basic_source_name,
+      </if>
+      <if test="basicDate != null" >
+        basic_date,
+      </if>
+      <if test="basicIdentifier1 != null" >
+        basic_identifier_1,
+      </if>
+      <if test="basicDescription != null" >
+        basic_description,
+      </if>
+      <if test="basicSourceNo != null" >
+        basic_source_no,
+      </if>
+      <if test="basicPage != null" >
+        basic_page,
+      </if>
+      <if test="procYear != null" >
+        proc_year,
+      </if>
+      <if test="procEnbody != null" >
+        proc_enbody,
+      </if>
+      <if test="procClassId != null" >
+        proc_class_id,
+      </if>
+      <if test="procChannel != null" >
+        proc_channel,
+      </if>
+      <if test="procDxid != null" >
+        proc_dxid,
+      </if>
+      <if test="procFileLink != null" >
+        proc_file_link,
+      </if>
+      <if test="procQuote != null" >
+        proc_quote,
+      </if>
+      <if test="detaiurl != null" >
+        detaiurl,
+      </if>
+      <if test="yycount != null" >
+        yycount,
+      </if>
+      <if test="impactFactorCh != null" >
+        impact_factor_ch,
+      </if>
+      <if test="impactFactorEn != null" >
+        impact_factor_en,
+      </if>
+      <if test="avenue != null" >
+        avenue,
+      </if>
+      <if test="cnkiYycount != null" >
+        cnki_yycount,
+      </if>
+      <if test="wfYycount != null" >
+        wf_yycount,
+      </if>
+      <if test="cqvipYycount != null" >
+        cqvip_yycount,
+      </if>
+      <if test="warePageView != null" >
+        ware_page_view,
+      </if>
+      <if test="downloadCount != null" >
+        download_count,
+      </if>
+      <if test="viewElements != null" >
+        view_elements,
+      </if>
+      <if test="viewElementsJson != null" >
+        view_elements_json,
+      </if>
+      <if test="foundation != null" >
+        foundation,
+      </if>
+      <if test="screenshot != null" >
+        screenshot,
+      </if>
+      <if test="basicIdCreator != null" >
+        basic_id_creator,
+      </if>
+      <if test="basicIdKeyword != null" >
+        basic_id_keyword,
+      </if>
+      <if test="basicIdContact != null" >
+        basic_id_contact,
+      </if>
+      <if test="avenueType != null" >
+        avenue_type,
+      </if>
+      <if test="gmtCreate != null" >
+        gmt_create,
+      </if>
+      <if test="gmtModified != null" >
+        gmt_modified,
+      </if>
+      <if test="procChannelId != null" >
+        proc_channel_id,
+      </if>
+      <if test="basicContactId != null" >
+        basic_contact_id,
+      </if>
+      <if test="basicCreatorId != null" >
+        basic_creator_id,
+      </if>
+      <if test="basicKeywordId != null" >
+        basic_keyword_id,
+      </if>
+      <if test="basicIdDate != null" >
+        basic_id_date,
+      </if>
+      <if test="basicDateSort != null" >
+        basic_date_sort,
+      </if>
+      <if test="ssid != null" >
+        ssid,
+      </if>
+      <if test="magid != null" >
+        magid,
+      </if>
+      <if test="jourid != null" >
+        jourid,
+      </if>
+      <if test="originalProjectResId != null" >
+        original_project_res_id,
+      </if>
+      <if test="isDisplay != null" >
+        is_display,
+      </if>
+      <if test="activityId != null" >
+        activity_id,
+      </if>
+      <if test="bookClassification != null" >
+        book_classification,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="resourceId != null" >
+        #{resourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicTitle != null" >
+        #{basicTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="basicCreator != null" >
+        #{basicCreator,jdbcType=VARCHAR},
+      </if>
+      <if test="basicPublisher != null" >
+        #{basicPublisher,jdbcType=VARCHAR},
+      </if>
+      <if test="basicKeyword != null" >
+        #{basicKeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="basicContact != null" >
+        #{basicContact,jdbcType=VARCHAR},
+      </if>
+      <if test="basicSourceName != null" >
+        #{basicSourceName,jdbcType=VARCHAR},
+      </if>
+      <if test="basicDate != null" >
+        #{basicDate,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdentifier1 != null" >
+        #{basicIdentifier1,jdbcType=VARCHAR},
+      </if>
+      <if test="basicDescription != null" >
+        #{basicDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="basicSourceNo != null" >
+        #{basicSourceNo,jdbcType=VARCHAR},
+      </if>
+      <if test="basicPage != null" >
+        #{basicPage,jdbcType=VARCHAR},
+      </if>
+      <if test="procYear != null" >
+        #{procYear,jdbcType=VARCHAR},
+      </if>
+      <if test="procEnbody != null" >
+        #{procEnbody,jdbcType=VARCHAR},
+      </if>
+      <if test="procClassId != null" >
+        #{procClassId,jdbcType=VARCHAR},
+      </if>
+      <if test="procChannel != null" >
+        #{procChannel,jdbcType=INTEGER},
+      </if>
+      <if test="procDxid != null" >
+        #{procDxid,jdbcType=VARCHAR},
+      </if>
+      <if test="procFileLink != null" >
+        #{procFileLink,jdbcType=VARCHAR},
+      </if>
+      <if test="procQuote != null" >
+        #{procQuote,jdbcType=INTEGER},
+      </if>
+      <if test="detaiurl != null" >
+        #{detaiurl,jdbcType=VARCHAR},
+      </if>
+      <if test="yycount != null" >
+        #{yycount,jdbcType=INTEGER},
+      </if>
+      <if test="impactFactorCh != null" >
+        #{impactFactorCh,jdbcType=VARCHAR},
+      </if>
+      <if test="impactFactorEn != null" >
+        #{impactFactorEn,jdbcType=VARCHAR},
+      </if>
+      <if test="avenue != null" >
+        #{avenue,jdbcType=VARCHAR},
+      </if>
+      <if test="cnkiYycount != null" >
+        #{cnkiYycount,jdbcType=VARCHAR},
+      </if>
+      <if test="wfYycount != null" >
+        #{wfYycount,jdbcType=VARCHAR},
+      </if>
+      <if test="cqvipYycount != null" >
+        #{cqvipYycount,jdbcType=VARCHAR},
+      </if>
+      <if test="warePageView != null" >
+        #{warePageView,jdbcType=VARCHAR},
+      </if>
+      <if test="downloadCount != null" >
+        #{downloadCount,jdbcType=VARCHAR},
+      </if>
+      <if test="viewElements != null" >
+        #{viewElements,jdbcType=VARCHAR},
+      </if>
+      <if test="viewElementsJson != null" >
+        #{viewElementsJson,jdbcType=VARCHAR},
+      </if>
+      <if test="foundation != null" >
+        #{foundation,jdbcType=VARCHAR},
+      </if>
+      <if test="screenshot != null" >
+        #{screenshot,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdCreator != null" >
+        #{basicIdCreator,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdKeyword != null" >
+        #{basicIdKeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdContact != null" >
+        #{basicIdContact,jdbcType=VARCHAR},
+      </if>
+      <if test="avenueType != null" >
+        #{avenueType,jdbcType=TINYINT},
+      </if>
+      <if test="gmtCreate != null" >
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null" >
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="procChannelId != null" >
+        #{procChannelId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicContactId != null" >
+        #{basicContactId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicCreatorId != null" >
+        #{basicCreatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicKeywordId != null" >
+        #{basicKeywordId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdDate != null" >
+        #{basicIdDate,jdbcType=VARCHAR},
+      </if>
+      <if test="basicDateSort != null" >
+        #{basicDateSort,jdbcType=INTEGER},
+      </if>
+      <if test="ssid != null" >
+        #{ssid,jdbcType=VARCHAR},
+      </if>
+      <if test="magid != null" >
+        #{magid,jdbcType=VARCHAR},
+      </if>
+      <if test="jourid != null" >
+        #{jourid,jdbcType=VARCHAR},
+      </if>
+      <if test="originalProjectResId != null" >
+        #{originalProjectResId,jdbcType=VARCHAR},
+      </if>
+      <if test="isDisplay != null" >
+        #{isDisplay,jdbcType=TINYINT},
+      </if>
+      <if test="activityId != null" >
+        #{activityId,jdbcType=INTEGER},
+      </if>
+      <if test="bookClassification != null" >
+        #{bookClassification,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.example.demo.reading.model.po.ClassicBooksExample" resultType="java.lang.Integer" >
+    select count(*) from classic_books
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update classic_books
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.resourceId != null" >
+        resource_id = #{record.resourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicTitle != null" >
+        basic_title = #{record.basicTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicCreator != null" >
+        basic_creator = #{record.basicCreator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicPublisher != null" >
+        basic_publisher = #{record.basicPublisher,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicKeyword != null" >
+        basic_keyword = #{record.basicKeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicContact != null" >
+        basic_contact = #{record.basicContact,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicSourceName != null" >
+        basic_source_name = #{record.basicSourceName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicDate != null" >
+        basic_date = #{record.basicDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicIdentifier1 != null" >
+        basic_identifier_1 = #{record.basicIdentifier1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicDescription != null" >
+        basic_description = #{record.basicDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicSourceNo != null" >
+        basic_source_no = #{record.basicSourceNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicPage != null" >
+        basic_page = #{record.basicPage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.procYear != null" >
+        proc_year = #{record.procYear,jdbcType=VARCHAR},
+      </if>
+      <if test="record.procEnbody != null" >
+        proc_enbody = #{record.procEnbody,jdbcType=VARCHAR},
+      </if>
+      <if test="record.procClassId != null" >
+        proc_class_id = #{record.procClassId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.procChannel != null" >
+        proc_channel = #{record.procChannel,jdbcType=INTEGER},
+      </if>
+      <if test="record.procDxid != null" >
+        proc_dxid = #{record.procDxid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.procFileLink != null" >
+        proc_file_link = #{record.procFileLink,jdbcType=VARCHAR},
+      </if>
+      <if test="record.procQuote != null" >
+        proc_quote = #{record.procQuote,jdbcType=INTEGER},
+      </if>
+      <if test="record.detaiurl != null" >
+        detaiurl = #{record.detaiurl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.yycount != null" >
+        yycount = #{record.yycount,jdbcType=INTEGER},
+      </if>
+      <if test="record.impactFactorCh != null" >
+        impact_factor_ch = #{record.impactFactorCh,jdbcType=VARCHAR},
+      </if>
+      <if test="record.impactFactorEn != null" >
+        impact_factor_en = #{record.impactFactorEn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.avenue != null" >
+        avenue = #{record.avenue,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cnkiYycount != null" >
+        cnki_yycount = #{record.cnkiYycount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.wfYycount != null" >
+        wf_yycount = #{record.wfYycount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cqvipYycount != null" >
+        cqvip_yycount = #{record.cqvipYycount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.warePageView != null" >
+        ware_page_view = #{record.warePageView,jdbcType=VARCHAR},
+      </if>
+      <if test="record.downloadCount != null" >
+        download_count = #{record.downloadCount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.viewElements != null" >
+        view_elements = #{record.viewElements,jdbcType=VARCHAR},
+      </if>
+      <if test="record.viewElementsJson != null" >
+        view_elements_json = #{record.viewElementsJson,jdbcType=VARCHAR},
+      </if>
+      <if test="record.foundation != null" >
+        foundation = #{record.foundation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.screenshot != null" >
+        screenshot = #{record.screenshot,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicIdCreator != null" >
+        basic_id_creator = #{record.basicIdCreator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicIdKeyword != null" >
+        basic_id_keyword = #{record.basicIdKeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicIdContact != null" >
+        basic_id_contact = #{record.basicIdContact,jdbcType=VARCHAR},
+      </if>
+      <if test="record.avenueType != null" >
+        avenue_type = #{record.avenueType,jdbcType=TINYINT},
+      </if>
+      <if test="record.gmtCreate != null" >
+        gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.gmtModified != null" >
+        gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.procChannelId != null" >
+        proc_channel_id = #{record.procChannelId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicContactId != null" >
+        basic_contact_id = #{record.basicContactId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicCreatorId != null" >
+        basic_creator_id = #{record.basicCreatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicKeywordId != null" >
+        basic_keyword_id = #{record.basicKeywordId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicIdDate != null" >
+        basic_id_date = #{record.basicIdDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.basicDateSort != null" >
+        basic_date_sort = #{record.basicDateSort,jdbcType=INTEGER},
+      </if>
+      <if test="record.ssid != null" >
+        ssid = #{record.ssid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.magid != null" >
+        magid = #{record.magid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.jourid != null" >
+        jourid = #{record.jourid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.originalProjectResId != null" >
+        original_project_res_id = #{record.originalProjectResId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isDisplay != null" >
+        is_display = #{record.isDisplay,jdbcType=TINYINT},
+      </if>
+      <if test="record.activityId != null" >
+        activity_id = #{record.activityId,jdbcType=INTEGER},
+      </if>
+      <if test="record.bookClassification != null" >
+        book_classification = #{record.bookClassification,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update classic_books
+    set id = #{record.id,jdbcType=BIGINT},
+      resource_id = #{record.resourceId,jdbcType=VARCHAR},
+      basic_title = #{record.basicTitle,jdbcType=VARCHAR},
+      basic_creator = #{record.basicCreator,jdbcType=VARCHAR},
+      basic_publisher = #{record.basicPublisher,jdbcType=VARCHAR},
+      basic_keyword = #{record.basicKeyword,jdbcType=VARCHAR},
+      basic_contact = #{record.basicContact,jdbcType=VARCHAR},
+      basic_source_name = #{record.basicSourceName,jdbcType=VARCHAR},
+      basic_date = #{record.basicDate,jdbcType=VARCHAR},
+      basic_identifier_1 = #{record.basicIdentifier1,jdbcType=VARCHAR},
+      basic_description = #{record.basicDescription,jdbcType=VARCHAR},
+      basic_source_no = #{record.basicSourceNo,jdbcType=VARCHAR},
+      basic_page = #{record.basicPage,jdbcType=VARCHAR},
+      proc_year = #{record.procYear,jdbcType=VARCHAR},
+      proc_enbody = #{record.procEnbody,jdbcType=VARCHAR},
+      proc_class_id = #{record.procClassId,jdbcType=VARCHAR},
+      proc_channel = #{record.procChannel,jdbcType=INTEGER},
+      proc_dxid = #{record.procDxid,jdbcType=VARCHAR},
+      proc_file_link = #{record.procFileLink,jdbcType=VARCHAR},
+      proc_quote = #{record.procQuote,jdbcType=INTEGER},
+      detaiurl = #{record.detaiurl,jdbcType=VARCHAR},
+      yycount = #{record.yycount,jdbcType=INTEGER},
+      impact_factor_ch = #{record.impactFactorCh,jdbcType=VARCHAR},
+      impact_factor_en = #{record.impactFactorEn,jdbcType=VARCHAR},
+      avenue = #{record.avenue,jdbcType=VARCHAR},
+      cnki_yycount = #{record.cnkiYycount,jdbcType=VARCHAR},
+      wf_yycount = #{record.wfYycount,jdbcType=VARCHAR},
+      cqvip_yycount = #{record.cqvipYycount,jdbcType=VARCHAR},
+      ware_page_view = #{record.warePageView,jdbcType=VARCHAR},
+      download_count = #{record.downloadCount,jdbcType=VARCHAR},
+      view_elements = #{record.viewElements,jdbcType=VARCHAR},
+      view_elements_json = #{record.viewElementsJson,jdbcType=VARCHAR},
+      foundation = #{record.foundation,jdbcType=VARCHAR},
+      screenshot = #{record.screenshot,jdbcType=VARCHAR},
+      basic_id_creator = #{record.basicIdCreator,jdbcType=VARCHAR},
+      basic_id_keyword = #{record.basicIdKeyword,jdbcType=VARCHAR},
+      basic_id_contact = #{record.basicIdContact,jdbcType=VARCHAR},
+      avenue_type = #{record.avenueType,jdbcType=TINYINT},
+      gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      proc_channel_id = #{record.procChannelId,jdbcType=VARCHAR},
+      basic_contact_id = #{record.basicContactId,jdbcType=VARCHAR},
+      basic_creator_id = #{record.basicCreatorId,jdbcType=VARCHAR},
+      basic_keyword_id = #{record.basicKeywordId,jdbcType=VARCHAR},
+      basic_id_date = #{record.basicIdDate,jdbcType=VARCHAR},
+      basic_date_sort = #{record.basicDateSort,jdbcType=INTEGER},
+      ssid = #{record.ssid,jdbcType=VARCHAR},
+      magid = #{record.magid,jdbcType=VARCHAR},
+      jourid = #{record.jourid,jdbcType=VARCHAR},
+      original_project_res_id = #{record.originalProjectResId,jdbcType=VARCHAR},
+      is_display = #{record.isDisplay,jdbcType=TINYINT},
+      activity_id = #{record.activityId,jdbcType=INTEGER},
+      book_classification = #{record.bookClassification,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.reading.model.po.ClassicBooks" >
+    update classic_books
+    <set >
+      <if test="resourceId != null" >
+        resource_id = #{resourceId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicTitle != null" >
+        basic_title = #{basicTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="basicCreator != null" >
+        basic_creator = #{basicCreator,jdbcType=VARCHAR},
+      </if>
+      <if test="basicPublisher != null" >
+        basic_publisher = #{basicPublisher,jdbcType=VARCHAR},
+      </if>
+      <if test="basicKeyword != null" >
+        basic_keyword = #{basicKeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="basicContact != null" >
+        basic_contact = #{basicContact,jdbcType=VARCHAR},
+      </if>
+      <if test="basicSourceName != null" >
+        basic_source_name = #{basicSourceName,jdbcType=VARCHAR},
+      </if>
+      <if test="basicDate != null" >
+        basic_date = #{basicDate,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdentifier1 != null" >
+        basic_identifier_1 = #{basicIdentifier1,jdbcType=VARCHAR},
+      </if>
+      <if test="basicDescription != null" >
+        basic_description = #{basicDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="basicSourceNo != null" >
+        basic_source_no = #{basicSourceNo,jdbcType=VARCHAR},
+      </if>
+      <if test="basicPage != null" >
+        basic_page = #{basicPage,jdbcType=VARCHAR},
+      </if>
+      <if test="procYear != null" >
+        proc_year = #{procYear,jdbcType=VARCHAR},
+      </if>
+      <if test="procEnbody != null" >
+        proc_enbody = #{procEnbody,jdbcType=VARCHAR},
+      </if>
+      <if test="procClassId != null" >
+        proc_class_id = #{procClassId,jdbcType=VARCHAR},
+      </if>
+      <if test="procChannel != null" >
+        proc_channel = #{procChannel,jdbcType=INTEGER},
+      </if>
+      <if test="procDxid != null" >
+        proc_dxid = #{procDxid,jdbcType=VARCHAR},
+      </if>
+      <if test="procFileLink != null" >
+        proc_file_link = #{procFileLink,jdbcType=VARCHAR},
+      </if>
+      <if test="procQuote != null" >
+        proc_quote = #{procQuote,jdbcType=INTEGER},
+      </if>
+      <if test="detaiurl != null" >
+        detaiurl = #{detaiurl,jdbcType=VARCHAR},
+      </if>
+      <if test="yycount != null" >
+        yycount = #{yycount,jdbcType=INTEGER},
+      </if>
+      <if test="impactFactorCh != null" >
+        impact_factor_ch = #{impactFactorCh,jdbcType=VARCHAR},
+      </if>
+      <if test="impactFactorEn != null" >
+        impact_factor_en = #{impactFactorEn,jdbcType=VARCHAR},
+      </if>
+      <if test="avenue != null" >
+        avenue = #{avenue,jdbcType=VARCHAR},
+      </if>
+      <if test="cnkiYycount != null" >
+        cnki_yycount = #{cnkiYycount,jdbcType=VARCHAR},
+      </if>
+      <if test="wfYycount != null" >
+        wf_yycount = #{wfYycount,jdbcType=VARCHAR},
+      </if>
+      <if test="cqvipYycount != null" >
+        cqvip_yycount = #{cqvipYycount,jdbcType=VARCHAR},
+      </if>
+      <if test="warePageView != null" >
+        ware_page_view = #{warePageView,jdbcType=VARCHAR},
+      </if>
+      <if test="downloadCount != null" >
+        download_count = #{downloadCount,jdbcType=VARCHAR},
+      </if>
+      <if test="viewElements != null" >
+        view_elements = #{viewElements,jdbcType=VARCHAR},
+      </if>
+      <if test="viewElementsJson != null" >
+        view_elements_json = #{viewElementsJson,jdbcType=VARCHAR},
+      </if>
+      <if test="foundation != null" >
+        foundation = #{foundation,jdbcType=VARCHAR},
+      </if>
+      <if test="screenshot != null" >
+        screenshot = #{screenshot,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdCreator != null" >
+        basic_id_creator = #{basicIdCreator,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdKeyword != null" >
+        basic_id_keyword = #{basicIdKeyword,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdContact != null" >
+        basic_id_contact = #{basicIdContact,jdbcType=VARCHAR},
+      </if>
+      <if test="avenueType != null" >
+        avenue_type = #{avenueType,jdbcType=TINYINT},
+      </if>
+      <if test="gmtCreate != null" >
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null" >
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="procChannelId != null" >
+        proc_channel_id = #{procChannelId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicContactId != null" >
+        basic_contact_id = #{basicContactId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicCreatorId != null" >
+        basic_creator_id = #{basicCreatorId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicKeywordId != null" >
+        basic_keyword_id = #{basicKeywordId,jdbcType=VARCHAR},
+      </if>
+      <if test="basicIdDate != null" >
+        basic_id_date = #{basicIdDate,jdbcType=VARCHAR},
+      </if>
+      <if test="basicDateSort != null" >
+        basic_date_sort = #{basicDateSort,jdbcType=INTEGER},
+      </if>
+      <if test="ssid != null" >
+        ssid = #{ssid,jdbcType=VARCHAR},
+      </if>
+      <if test="magid != null" >
+        magid = #{magid,jdbcType=VARCHAR},
+      </if>
+      <if test="jourid != null" >
+        jourid = #{jourid,jdbcType=VARCHAR},
+      </if>
+      <if test="originalProjectResId != null" >
+        original_project_res_id = #{originalProjectResId,jdbcType=VARCHAR},
+      </if>
+      <if test="isDisplay != null" >
+        is_display = #{isDisplay,jdbcType=TINYINT},
+      </if>
+      <if test="activityId != null" >
+        activity_id = #{activityId,jdbcType=INTEGER},
+      </if>
+      <if test="bookClassification != null" >
+        book_classification = #{bookClassification,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.reading.model.po.ClassicBooks" >
+    update classic_books
+    set resource_id = #{resourceId,jdbcType=VARCHAR},
+      basic_title = #{basicTitle,jdbcType=VARCHAR},
+      basic_creator = #{basicCreator,jdbcType=VARCHAR},
+      basic_publisher = #{basicPublisher,jdbcType=VARCHAR},
+      basic_keyword = #{basicKeyword,jdbcType=VARCHAR},
+      basic_contact = #{basicContact,jdbcType=VARCHAR},
+      basic_source_name = #{basicSourceName,jdbcType=VARCHAR},
+      basic_date = #{basicDate,jdbcType=VARCHAR},
+      basic_identifier_1 = #{basicIdentifier1,jdbcType=VARCHAR},
+      basic_description = #{basicDescription,jdbcType=VARCHAR},
+      basic_source_no = #{basicSourceNo,jdbcType=VARCHAR},
+      basic_page = #{basicPage,jdbcType=VARCHAR},
+      proc_year = #{procYear,jdbcType=VARCHAR},
+      proc_enbody = #{procEnbody,jdbcType=VARCHAR},
+      proc_class_id = #{procClassId,jdbcType=VARCHAR},
+      proc_channel = #{procChannel,jdbcType=INTEGER},
+      proc_dxid = #{procDxid,jdbcType=VARCHAR},
+      proc_file_link = #{procFileLink,jdbcType=VARCHAR},
+      proc_quote = #{procQuote,jdbcType=INTEGER},
+      detaiurl = #{detaiurl,jdbcType=VARCHAR},
+      yycount = #{yycount,jdbcType=INTEGER},
+      impact_factor_ch = #{impactFactorCh,jdbcType=VARCHAR},
+      impact_factor_en = #{impactFactorEn,jdbcType=VARCHAR},
+      avenue = #{avenue,jdbcType=VARCHAR},
+      cnki_yycount = #{cnkiYycount,jdbcType=VARCHAR},
+      wf_yycount = #{wfYycount,jdbcType=VARCHAR},
+      cqvip_yycount = #{cqvipYycount,jdbcType=VARCHAR},
+      ware_page_view = #{warePageView,jdbcType=VARCHAR},
+      download_count = #{downloadCount,jdbcType=VARCHAR},
+      view_elements = #{viewElements,jdbcType=VARCHAR},
+      view_elements_json = #{viewElementsJson,jdbcType=VARCHAR},
+      foundation = #{foundation,jdbcType=VARCHAR},
+      screenshot = #{screenshot,jdbcType=VARCHAR},
+      basic_id_creator = #{basicIdCreator,jdbcType=VARCHAR},
+      basic_id_keyword = #{basicIdKeyword,jdbcType=VARCHAR},
+      basic_id_contact = #{basicIdContact,jdbcType=VARCHAR},
+      avenue_type = #{avenueType,jdbcType=TINYINT},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      proc_channel_id = #{procChannelId,jdbcType=VARCHAR},
+      basic_contact_id = #{basicContactId,jdbcType=VARCHAR},
+      basic_creator_id = #{basicCreatorId,jdbcType=VARCHAR},
+      basic_keyword_id = #{basicKeywordId,jdbcType=VARCHAR},
+      basic_id_date = #{basicIdDate,jdbcType=VARCHAR},
+      basic_date_sort = #{basicDateSort,jdbcType=INTEGER},
+      ssid = #{ssid,jdbcType=VARCHAR},
+      magid = #{magid,jdbcType=VARCHAR},
+      jourid = #{jourid,jdbcType=VARCHAR},
+      original_project_res_id = #{originalProjectResId,jdbcType=VARCHAR},
+      is_display = #{isDisplay,jdbcType=TINYINT},
+      activity_id = #{activityId,jdbcType=INTEGER},
+      book_classification = #{bookClassification,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+
+  <select id="selectByNameAndClassification" resultMap="BaseResultMap">
+    SELECT * FROM classic_books WHERE basic_title LIKE CONCAT('%',#{bookName},'%')
+    <if test="bookClassification != 0">
+      AND book_classification =
+      #{bookClassification}
+    </if>
+  </select>
+
+  <select id="selectBybookClassifyAndbook_classification" resultMap="BaseResultMap">
+    SELECT * FROM classic_books WHERE is_display=0
+    <if test="book_classification != 0">
+      AND book_classification = #{book_classification}
+    </if>
+    <if test="bookClassify !=null and bookClassify != '' ">
+      AND proc_class_id = #{bookClassify}
+    </if>
+    AND resource_id IN (SELECT resourceid FROM book_essayinfo_mapper WHERE uuid IN (SELECT uuid FROM essay_info WHERE `status`=1))
+  </select>
+
+  <select id="selectByUuid" resultMap="BaseResultMap">
+    SELECT * FROM classic_books
+    WHERE resource_id IN (SELECT resourceid FROM book_essayinfo_mapper WHERE uuid IN (SELECT uuid FROM essay_info WHERE uuid = #{uuid}))
+  </select>
+
+</mapper>

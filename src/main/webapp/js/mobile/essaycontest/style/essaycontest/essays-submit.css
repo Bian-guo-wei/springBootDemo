@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    font-family: "Microsoft Yahei", "微软雅黑", Arial, Helvetica, sans-serif;
+    /*background: #f1f4f9;*/
+}
+
+.works_wrap {
+    width: 95%;
+    margin: auto;
+    /*padding: 0.2rem 0;*/
+}
+.works_tab{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.works_tab li{
+    width: 50%;
+    padding: 0.2rem 0;
+    text-align: center;
+    font-size: 0.25rem;
+}
+.works_tab .active_li{
+    border-bottom: 1px solid #00aaf5;
+}
+.works_one {
+    font-size: .27rem;
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.icon {
+    width: 10%;
+    height: .36rem;
+}
+
+.icon > img {
+    width: .4rem;
+    height: 100%;
+}
+
+.title {
+    width: 28%;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.inp {
+    width: 72%;
+    border-bottom: 1px solid #dfdfdf;
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    /*justify-content: space-between;*/
+}
+.input_border{
+    display: block;
+    width: 30%;
+    height: 38px;
+    border: 1px solid #169bd5;
+    line-height: 38px;
+    color: #fff;
+    background: #169bd5;
+    outline: none;
+    display: none;
+}
+
+.input_file{
+    width:30%;
+    position: relative;
+}
+.upfile{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+    opacity:0;
+}
+
+.text{
+    display: block;
+    width: 100%;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    color: #fff;
+    background: #169bd5;
+}
+.inp > input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.26rem;
+}
+.inp>.input_border{
+    width: 30%;
+    margin-left: 0.2rem;
+}
+.sure_btn {
+    width: 100%;
+    margin: 0.8rem 0;
+    font-size: .32rem;
+}
+
+.sureP {
+    width: 80%;
+    height: .8rem;
+    margin: auto;
+    border-radius: .05rem;
+    background: #3484cd;
+    color: #fff;
+    text-indent: 1em;
+    letter-spacing: 1em;
+    text-align: center;
+    line-height: .8rem;
+}
+
+.tips_box {
+    width: 90%;
+    margin: auto;
+    font-size: .21rem;
+    color: red;
+    margin-top: 1%;
+
+}

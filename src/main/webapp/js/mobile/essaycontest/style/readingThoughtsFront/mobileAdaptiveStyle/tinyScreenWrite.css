@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: 黑体, Arial, Helvetica, sans-serif;;
+}
+
+input {
+    outline: none;
+}
+
+.wrap {
+    width: 100%;
+}
+
+/*头部*/
+.header {
+    width: 95%;
+    margin: auto;
+}
+
+.head_box {
+    width: 100%;
+    height: 1rem;
+    margin: auto;
+}
+
+.head_box > img {
+    height: 100%;
+}
+
+/*背景图片*/
+.bg_image {
+    width: 100%;
+    height: 2.3rem;
+    background: url("../../../images/readingThoughtsFront/banner.jpg") center center no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg_wrap {
+    width: 100%;
+    margin: auto;
+    color: #fff;
+    font-size: .25rem;
+    padding: .5rem .4rem;
+    /*height: 2.0rem;*/
+}
+
+.bg_wrap img {
+    width: .95rem;
+    height: .955rem;
+    vertical-align: middle;
+}
+
+.bg_wrap span {
+    display: inline-block;
+    height: 100%;
+}
+
+/*阅读感悟书写区*/
+.reading_thought_wrap {
+    width: 95%;
+    margin: auto;
+}
+
+.reading_icon {
+    width: 100%;
+    height: .5rem;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.reading_icon > img {
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+.reading_icon > span {
+    display: block;
+    color: #aaa;
+    font-size: .27rem;
+    margin-left: 5px;
+}
+
+.reading_box {
+    width: 100%;
+    background: #fff;
+    padding: .2rem 0;
+}
+
+/*.reading_box div{*/
+/*padding: .1rem 0;*/
+/*}*/
+.title_span {
+    font-size: .23rem;
+    display: inline-block;
+    width: 10%;
+    text-align: right;
+    color: #5e443b;
+}
+
+.reading_thoughts_title {
+    height: 1.2rem;
+    line-height: .6rem;
+}
+
+.reading_thoughts_title > input {
+    width: 80%;
+    height: .64rem;
+    outline: none;
+    border: 1px solid #aaa;
+    color: #5e443b;
+}
+
+.reading_thoughts_text > textarea {
+    width: 80%;
+    min-height: 3.5rem;
+    outline: none;
+    border: 1px solid #aaa;
+    color: #5e443b;
+}
+
+.reading_thoughts_submit {
+    width: 100%;
+    height: .8rem;
+    line-height: .1rem;
+    text-align: center;
+    margin-bottom: .2rem;
+}
+
+.reading_thoughts_submit > input {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #5e443b;
+    color: #fff;
+    background: #5e443b;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+/*底部*/
+.footer {
+    width: 95%;
+    margin: auto;
+    height: .6rem;
+    /*line-height: .6rem;*/
+    border-top: 1px solid #d7d7d7;
+    margin-top: .5rem;
+    color: #5e443b;
+    text-align: center;
+    font-size: .15rem;
+}

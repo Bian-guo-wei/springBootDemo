@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font: 12px/1.5 宋体, Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+/*内容区*/
+.content_wrap {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+}
+.main_content {
+
+}
+
+.content_top {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #a4a4a4;
+    background: #efefef;
+    padding-left: 15px;
+}
+
+.content_top i.icon {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    background: url(../../images/readingThought/icons.gif) no-repeat;
+    width: 4px;
+    height: 7px;
+    background-position: left -31px;
+    margin: 11px 8px 0px 0px;
+}
+
+.content_search {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #a4a4a4;
+    padding: 15px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.content_search div {
+    margin-left: 20px;
+}
+
+.college > input {
+    width: 130px;
+    height: 25px;
+}
+
+.classify > select {
+    width: 80px;
+    height: 25px;
+}
+
+.date_select > select {
+    width: 170px;
+    height: 25px;
+    border: 1px solid #cacaca;
+}
+
+.button > input {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    -moz-line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.content_table {
+    padding: 20px 0;
+}
+
+.content_table table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    border: 0;
+}
+
+.content_table table th {
+    border: 1px solid #ddd;
+    height: 38px;
+    color: #666;
+    background: url(../../images/readingThought/bg.gif) repeat-x left -122px;
+}
+
+.content_table table td {
+    line-height: 1.1;
+    border: 1px solid #ddd;
+    height: 38px;
+    color: #666;
+}
+
+.cor {
+    color: #006699;
+    margin-right: 10px;
+}
+
+.cor:hover {
+    color: #f96105;
+}

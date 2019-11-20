@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font:12px/1.5 宋体, Arial, Helvetica, sans-serif; color:#333;
+}
+/*内容区*/
+.content_wrap {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+}
+.main_content{
+
+}
+.content_top{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #a4a4a4;
+    background: #efefef;
+    padding-left: 15px;
+}
+.content_top i.icon{
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    background: url(../../images/readingThought/icons.gif) no-repeat;
+    width: 4px;
+    height: 7px;
+    background-position: left -31px;
+    margin: 11px 8px 0px 0px;
+}
+
+.content_search{
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #a4a4a4;
+    padding: 15px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.content_search div{
+    margin-left: 20px;
+}
+.college>input{
+    width: 130px;
+    height: 25px;
+}
+.classify>select{
+    width: 80px;
+    height: 25px;
+}
+.date_select>input{
+    width: 170px;
+    height: 25px;
+    background: #fff url(../../images/readingThought/datePicker.gif) no-repeat right;
+    border: 1px solid #cacaca;
+}
+.button>input{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    -moz-line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.content_table{
+    padding: 20px 0;
+}
+.content_table table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    border: 0;
+}
+.content_table table th {
+    border: 1px solid #ddd;
+    height: 38px;
+    color: #666;
+    background: url(../../images/readingThought/bg.gif) repeat-x left -122px;
+}
+.content_table table td{
+    line-height: 1.1;
+    border: 1px solid #ddd;
+    height: 38px;
+    color: #666;
+}
+.cor {
+    color: #006699;
+    margin-right: 10px;
+}
+.cor:hover {
+    color: #f96105;
+}
+
+/*分页*/
+.pages {
+    width: 90%;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin: 15px auto;
+    line-height: 24px;
+}
+
+.pages > * {
+    margin-left: 5px;
+}
+
+.first_page, .last_page, .pre_page, .next_page {
+    cursor: pointer;
+}
+
+.pages_list {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.pages_list {
+    cursor: pointer;
+}
+
+.pages_list .active_li {
+    color: #00aaf5;
+}
+
+.to_numpages > input {
+    width: 50px;
+    margin: 0 3px;
+}
+
+#sure {
+    background: #00aaf5;
+    color: #fff;
+    width: 35px;
+    border-radius: 3px;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #00aaf5;
+    cursor: pointer;
+}
+
